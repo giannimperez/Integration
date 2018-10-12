@@ -10,6 +10,10 @@
  * material
  **/
 
+// Boolean: true or false
+// Int: whole number digits
+// Double: decimal number digits
+// String: text
 import java.util.Scanner;
 
 public class Main {
@@ -24,6 +28,10 @@ public class Main {
     System.out.println("Welcome " + user + "!");
     System.out.println("What is your class? fast, strong or perceptive?");
 
+    int att = 0;
+    int def = 0;
+    int mag = 0;
+
     // Create users class
     String cls = in.nextLine();
     int clas = 0;
@@ -31,16 +39,23 @@ public class Main {
     if (cls.equals("fast")) {
       System.out.println("youre prob slow in real life");
       clas = 1;
+      att += 1;
     } else if (cls.equals("strong")) {
       System.out.println("Nah youre prob weak");
       clas = 2;
+      def += 1;
     } else if (cls.equals("perceptive")) {
       System.out.println("I Is VeRY perCenTIVe");
       clas = 3;
+      mag += 1;
     } else {
       System.out.println("You couldn't even pick a class, so you died...");
       System.exit(0);
     }
+
+    System.out.println("Attack: " + att);
+    System.out.println("Defense: " + def);
+    System.out.println("Intelligence: " + mag);
 
     System.out.println(" ");
     System.out.println(
@@ -54,9 +69,6 @@ public class Main {
     // Choose weapon
     String wp = in.nextLine();
     int weap = 0;
-    int att = 0;
-    int def = 0;
-    int mag = 0;
 
     if (wp.equals("sword")) {
       System.out.println("nice sword");
